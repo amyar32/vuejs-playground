@@ -1,0 +1,6 @@
+v-bind:src="data?"
+v-on:{eventListener}="expression/methods?"
+v-html="expression"
+$ sing = reserved value???
+event modifer, titik(.) di akhir event? like prevent default, default, DEFAULTTT
+v-once: = //menampilkan sekali

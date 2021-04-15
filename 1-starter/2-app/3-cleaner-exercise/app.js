@@ -1,9 +1,25 @@
 const app = Vue.createApp({
   data() {
     return {
-      text: "Hola",
+      text: "",
       confirmedText: "",
     };
+  },
+  watch: {
+    // nama method di bawah sm dengan data, jd ketika data berubah, method dbwh dieksekusksi otomatis
+    text(newVal, oldVal) {
+      console.log(newVal + " text changed");
+      console.log("before " + oldVal);
+    },
+  },
+  computed: {
+    someComputed() {
+      if (!this.text) {
+        return "";
+      } else {
+        return this.text + " computed!";
+      }
+    },
   },
   methods: {
     setAlert() {

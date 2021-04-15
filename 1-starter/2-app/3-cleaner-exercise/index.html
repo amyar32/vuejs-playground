@@ -14,8 +14,8 @@
   </head>
   <body>
     <section id="my-section">
-      <div class="columns">
-        <div class="column"></div>
+      <div class="columns is-vcentered">
+        <div class="column" style="height: 100vh"></div>
         <!-- START -->
         <div class="column is-7-tablet is-5-desktop">
           <div class="box">
@@ -29,7 +29,7 @@
             </p>
 
             <div class="field">
-              <label class="label">Controlled Data Event Listener</label>
+              <label class="label">Event Listener</label>
               <div class="control">
                 <input
                   v-on:input="setText"
@@ -53,6 +53,19 @@
                 />
               </div>
               <p class="help">Press Enter, Input Data : {{ confirmedText }}</p>
+            </div>
+
+            <div class="field">
+              <label class="label">Data Binding + Event Binding</label>
+              <div class="control">
+                <input
+                  v-model="text"
+                  class="input"
+                  type="text"
+                  placeholder="Text input"
+                />
+                <p class="help">{{ someComputed }}</p>
+              </div>
             </div>
 
             <div class="columns is-centered">

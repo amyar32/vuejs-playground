@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
+    />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <section id="my-section">
+      <div class="columns">
+        <div class="column"></div>
+        <!-- START -->
+        <div class="column is-7-tablet is-5-desktop">
+          <div class="box">
+            <h1 class="title">Vue.js Exercise</h1>
+            <p class="subtitle is-5">
+              Visit
+              <a href="https://github.com/tikosewads/vuejs-playground"
+                >My Github Page</a
+              >
+              for more example.
+            </p>
+
+            <div class="field">
+              <label class="label">Controlled Data Event Listener</label>
+              <div class="control">
+                <input
+                  v-on:input="setText"
+                  class="input"
+                  type="text"
+                  placeholder="Text input"
+                />
+              </div>
+              <p class="help">Input Data : {{ text }}</p>
+            </div>
+
+            <div class="field">
+              <label class="label">Dual Event Listener</label>
+              <div class="control">
+                <input
+                  v-on:input="setText"
+                  v-on:keyup.enter="setConfirmedText"
+                  class="input"
+                  type="text"
+                  placeholder="Text input"
+                />
+              </div>
+              <p class="help">Press Enter, Input Data : {{ confirmedText }}</p>
+            </div>
+
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <button
+                  v-on:click="setAlert"
+                  class="button is-danger is-small is-fullwidth"
+                >
+                  Click to Alert
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column"></div>
+      </div>
+    </section>
+    <!-- END  -->
+  </body>
+</html>

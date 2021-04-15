@@ -10,11 +10,31 @@
   </head>
   <body>
     <section id="my-section">
-      <h1>Hello {{ name }}</h1>
+      <!-- v-once membuat confirmedName tidak berubah -->
+      <h1 v-once>Hello {{ confirmedName }}</h1>
+
+      <h1>Hello {{ confirmedName }}</h1>
       <h3>Age : {{ age }}</h3>
-      <h3>Age-Plus : {{ increaseAge(5) }}</h3>
       <h3>Fav-Num : {{ randomNumber() }}</h3>
+      <button v-on:click="increaseAge(5)">Plus Age</button>
+
+      <!-- titik diakhir submit adalah modifier by vue -->
+      <button v-on:click.right="decreaseAge(5)">Minus Age</button>
+
       <img v-bind:src="imageUrl" alt="ho" />
+
+      <!-- setelah menulis somthin, tekan enter untuk mengisi data confirmName yang akan ditampilkan -->
+      <input
+        type="text"
+        v-on:input="setName($event, 'Bagoy')"
+        v-on:keyup.enter="confirmName"
+      />
+
+      <!-- titik diakhir submit adalah modifier by vue -->
+      <form v-on:submit.prevent="submitForm">
+        <input type="text" />
+        <button>Sumbit</button>
+      </form>
     </section>
   </body>
 </html>

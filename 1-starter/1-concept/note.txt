@@ -4,3 +4,7 @@ v-html="expression"
 $ sing = reserved value???
 event modifer, titik(.) di akhir event? like prevent default, default, DEFAULTTT
 v-once: = //menampilkan sekali
+v-model: 
+COMPUTED CACHING IS GOOD FOR OUTPUTING COMPLEX DATA
+watcher 1 dependedncy
+computed multiple

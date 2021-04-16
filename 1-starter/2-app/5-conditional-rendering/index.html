@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
+    />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <section id="my-section">
+      <div class="columns is-vcentered">
+        <div class="column" style="height: 100vh"></div>
+        <!-- START -->
+        <div class="column is-7-tablet is-5-desktop">
+          <div class="box">
+            <h1 class="title" @click="">Vue.js Exercise</h1>
+            <p class="subtitle is-5">
+              Visit
+              <a href="https://github.com/tikosewads/vuejs-playground"
+                >My Github Page</a
+              >
+              for more example.
+            </p>
+            <!-- START II  -->
+            <div class="field">
+              <label class="label">Add To Do</label>
+              <div class="control">
+                <input
+                  class="input"
+                  v-model="todo"
+                  @keyup.enter="enterHandler"
+                />
+              </div>
+              <p :class="['help', messageHelper.style ]">
+                {{ messageHelper.message }}
+              </p>
+            </div>
+            <div class="content">
+              <p v-if="todoList.length === 0">Masukan Todo!</p>
+              <ul v-else>
+                <li
+                  v-for="(todo, index) in todoList"
+                  :key="todo"
+                  @click="removeTodo(index)"
+                >
+                  <p>{{ index + 1 }} - {{ todo }}</p>
+                  <input type="text" @click.stop />
+                </li>
+              </ul>
+            </div>
+
+            <!-- END II -->
+          </div>
+        </div>
+        <div class="column"></div>
+      </div>
+    </section>
+    <!-- END  -->
+  </body>
+</html>

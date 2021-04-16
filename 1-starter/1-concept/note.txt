@@ -8,3 +8,15 @@ v-model:
 COMPUTED CACHING IS GOOD FOR OUTPUTING COMPLEX DATA
 watcher 1 dependedncy
 computed multiple
+v-if
+v-else
+v-else-if
+v-else
+v-show(alternative) = display: none
+v-for .. in keyword bs arr bisa obj 
+    (value, index) in arr
+    (value, key, index) in obj
+    num in 10 => 10x loop
+
+v-for + key=""
+key is optional, uniqued identificitaional criteria tell vue different elements apart

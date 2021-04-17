@@ -24,6 +24,8 @@ const app = Vue.createApp({
   },
   methods: {
     enterHandler(e) {
+      // point to DOM Obj
+      console.log(this.$refs.iTodo.value);
       this.todoList.push(e.target.value);
       this.todo = "";
     },

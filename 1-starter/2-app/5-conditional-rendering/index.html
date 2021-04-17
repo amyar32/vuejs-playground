@@ -41,6 +41,15 @@
                 {{ messageHelper.message }}
               </p>
             </div>
+            <div class="field">
+              <label class="label">Add To Do (with $ref)</label>
+              <div class="control">
+                <input class="input" ref="iTodo" @keyup.enter="enterHandler" />
+              </div>
+              <p :class="['help', messageHelper.style ]">
+                {{ messageHelper.message }}
+              </p>
+            </div>
             <div class="content">
               <p v-if="todoList.length === 0">Masukan Todo!</p>
               <ul v-else>
@@ -50,7 +59,11 @@
                   @click="removeTodo(index)"
                 >
                   <p>{{ index + 1 }} - {{ todo }}</p>
-                  <input type="text" @click.stop />
+                  <input
+                    type="text"
+                    @click.stop
+                    placeholder="contoh unique inpt"
+                  />
                 </li>
               </ul>
             </div>

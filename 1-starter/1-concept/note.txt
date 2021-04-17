@@ -20,3 +20,9 @@ v-for .. in keyword bs arr bisa obj
 
 v-for + key=""
 key is optional, uniqued identificitaional criteria tell vue different elements apart
+
+data() {
+    return {
+        template: <p></p>
+    }
+}
